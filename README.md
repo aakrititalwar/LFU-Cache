@@ -39,7 +39,8 @@ Code Overview :
 1. Class ListNode: Node contains freq(usecount), head and tail pointers for KeyNode list. 
    Functions:
    a) Get - returns val for the key and removes the node from the KeyNode  lisnked list of curr frequency
-   b) 
+   b) remove - removes the first key from the list node
+   c) add - adds keynode to the end of the the list.
 
 1. Class LFUCache - initializes :
          a)empty linked list of type ListNode
@@ -47,6 +48,7 @@ Code Overview :
          c) unordered_map of type <int, pair<ListNode*,KeyNode*>>
          
    Functions:
-   
- 
+   a) remove() - removes the first keynode from the first ListNode in the List and remove the listnode if after removing the key node the list node becomes empty.   
+   b) get - if key not present return -1, remove keynode from current freqnode and add to the back of the frequency node of freq = old_freq+1, returns value
+   c) put - if key exists , increase its frequency in the linklist. if not create  a new keynode in the linklist for listNode with freq = 1 
 
