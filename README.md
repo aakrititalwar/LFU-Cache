@@ -2,6 +2,8 @@
 Efficient Implementation of Least Frequently Used Cache with O(1) runtime complexity for all operations
 
 Problem to be Solved :
+[!alt text] <img width="693" alt="LFU1" src="https://user-images.githubusercontent.com/34090277/197321071-dc773fa3-9092-413f-bbf4-c6c1ac2cc9dc.PNG">
+[!alt text] <img width="436" alt="LFU2" src="https://user-images.githubusercontent.com/34090277/197321080-ec63c071-ed96-421f-b317-e3c2218071bf.PNG">
 
 Key Points and Thinking Process:
 
@@ -32,6 +34,11 @@ we group together all the keys that have the same frequency and store it in a Le
 Use of nested Linked List where each node of the first linked list has another linkedlist and count of frequency and the nested linked list contains the key value pair.
 We also have a hashmap of (Key, Pair(Pointer to FreqNode , pointer to Key-value Node)) 
 Both are doubly linked list and each node of the frequency linkedlist contains head and tail pointers for the key value linked list. 
+
+Illustration :
+
+[!alt text] ![Lfu](https://user-images.githubusercontent.com/34090277/197321052-bf7a2ec9-8736-4595-bd3b-674604ed106d.jpg)
+
 
 Code Overview :
 1. Class KeyNode: Node contains properties Key and value. The KeyNode Linkedlist is specific to each node of freq linked list.
